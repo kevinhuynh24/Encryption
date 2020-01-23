@@ -1,9 +1,8 @@
 #include <iostream>
 #include <cmath>
 
-#ifndef MARMOSET_TESTING
 int main();
-#endif
+
 
 char *encode (char *plaintext, unsigned long key);
 
@@ -239,7 +238,6 @@ char *decode (char *ciphertext, unsigned long key) {
 	return stuffy;
 }
 
-#ifndef MARMOSET_TESTING
 int main() {
 	unsigned long key{89963221};
 	char ch[]{ "UWU"
@@ -252,4 +250,4 @@ int main() {
 	std::cout << "Decrypted String: " << plaintext << std::endl;
 	return 0;
 }
-#endif
+
